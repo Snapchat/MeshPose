@@ -1,0 +1,1 @@
+Please install https://github.com/facebookresearch/detectron2/ for DensePose evaluation.
