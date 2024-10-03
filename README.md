@@ -1,6 +1,9 @@
 # MeshPose: Unifying DensePose and 3D Body Mesh reconstruction
 
-Inference and Evaluation code for the paper **MeshPose: Unifying DensePose and 3D Body Mesh reconstruction**
+Inference and Evaluation code for the paper **MeshPose: Unifying DensePose and 3D Body Mesh reconstruction (CVPR 2024)**
+
+[![report](https://img.shields.io/badge/Project-Page-blue)](https://meshpose.github.io/)
+[![report](https://img.shields.io/badge/ArXiv-Paper-red)](https://arxiv.org/abs/2406.10180)
 
 ![Example Image](assets/screenshots_from_video_demos.png)
 
