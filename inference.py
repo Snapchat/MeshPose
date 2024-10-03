@@ -14,8 +14,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class MeshPoseInference:
     def __init__(self,
-                 main_checkpoint="checkpoints/hrnet32_checkpoint.pth.tar",
-                 upsampler_checkpoint="checkpoints/upsampler_checkpoint.pth.tar",
+                 main_checkpoint="checkpoints/hrnet32_checkpoint_EXTERNAL.pth.tar",
+                 upsampler_checkpoint="checkpoints/upsampler_checkpoint_EXTERNAL.pth.tar",
                  scale_bbox=1.1):
         self.img_preprocessing = ImagePreprocessing(scale_bbox=scale_bbox)
         self.meshpose_model = MeshPoseModel(checkpoint=main_checkpoint)

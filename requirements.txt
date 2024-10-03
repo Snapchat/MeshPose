@@ -1,0 +1,10 @@
+matplotlib==3.9.2
+numpy==2.1.1
+opencv_python==4.10.0.84
+pycocotools==2.0.8
+pyrender==0.1.45
+scipy==1.14.1
+torch==2.4.1
+torchvision==0.19.1
+tqdm==4.66.5
+trimesh==4.4.9
