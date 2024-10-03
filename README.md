@@ -40,7 +40,8 @@ git clone https://github.com/facebookresearch/detectron2.git
 ```
 and follow its [installation instructions](https://detectron2.readthedocs.io/en/latest/tutorials/install.html).
 
-Download the `densepose minival` dataset into `./DensePose_COCO` according to the instructions in `./DensePose_COCO/densepose_dataset.md`.
+Download the `densepose minival` dataset and the UV data into `./DensePose_COCO` according to the instructions in `./DensePose_COCO/densepose_dataset.md`.
+
 
 ### MeshPose Inference on Densepose Minival
 The following command will run meshpose on each instance in the evaluation dataset and save the results in `output/model_predictions.json`
