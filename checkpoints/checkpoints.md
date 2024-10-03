@@ -4,7 +4,7 @@ Please place here the model weights of the MeshPose system.
 
 - upsampler_checkpoint_EXTERNAL.pth.tar
 
-They can be downloaded from:
+They can be downloaded from (after requesting access):
 
 - https://drive.google.com/file/d/1umN1LWCo51V9KItebzxB_HzdUc-Rc1z8/view?usp=drive_link
 

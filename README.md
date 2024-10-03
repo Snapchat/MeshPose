@@ -12,7 +12,7 @@ Inference and Evaluation code for the paper **MeshPose: Unifying DensePose and 3
 ```
 git clone https://github.com/Snapchat/MeshPose.git
 
-conda create -n meshpose python=3.9
+conda create -n meshpose python=3.11
 conda activate meshpose
 
 pip install -r requirements.txt
