@@ -100,3 +100,7 @@ Results are saved in `output/my_mesh_predictions.txt`. We report the `GPSM AR` a
     pages     = {2405-2414}
 }
 ```
+
+## Contact
+
+For questions about this work please contact [akakolyris@snap.com](akakolyris@snap.com) or [e.le@cs.ucl.ac.uk](e.le@cs.ucl.ac.uk)
