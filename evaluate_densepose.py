@@ -1,3 +1,4 @@
+import os
 import cv2
 import sys
 import json
@@ -119,6 +120,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_densepose_score', type=str, default='output/densepose_predictions.txt')
     parser.add_argument('--densepose_coco_minival', type=str, default='DensePose_COCO/densepose_coco_2014_minival.json')
     args = parser.parse_args()
+
+    os.makedirs('output', exist_ok=True)
 
     print('Loading predictions...')
     with open(args.input_model_predictions, 'r') as f:

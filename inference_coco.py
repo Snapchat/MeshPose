@@ -14,6 +14,8 @@ if __name__ == '__main__':
     parser.add_argument('--output_model_predictions', type=str, default='output/model_predictions.json')
     args = parser.parse_args()
 
+    os.makedirs('output', exist_ok=True)
+
     coco_api = COCO(args.densepose_coco_minival)
 
     meshpose = MeshPoseInference(scale_bbox=1.25)

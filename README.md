@@ -45,12 +45,12 @@ Download the `densepose minival` dataset into `./DensePose_COCO` according to th
 ### MeshPose Inference on Densepose Minival
 The following command will run meshpose on each instance in the evaluation dataset and save the results in `output/model_predictions.json`
 ```
-python3 inference_coco.py
+python3 inference_coco.py --output_model_predictions output/model_predictions.json
 ```
 
 ### Evaluation of MeshPose Mesh Alignment on the DensePose Benchmark
 ```
-python3 evaluate_densepose.py
+python3 evaluate_densepose.py --input_model_predictions output/model_predictions.json --output_densepose_score output/densepose_predictions.txt
 ```
 
 ## General Human Mesh Recovery Evaluation on the DensePose Benchmark
@@ -80,6 +80,8 @@ smpl_xy_proj: a list of tuples (x,y) corresponding to the projection of the mesh
 ```
 
 Please make sure that the `smpl_xy_proj` coordinates are aligned with the original image.
+
+Note: To accelerate this, you can skip instances that don't have a `'dp_masks'` field, as they don't contain DensePose annotations and don't contribute to the metrics.
 
 Once `my_mesh_predictions.json` is ready, the system can be evaluated via:
 
