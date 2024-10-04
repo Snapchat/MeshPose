@@ -13,7 +13,7 @@ You will also need the DensePose UV data, please follow the instructions from [h
   densepose_coco_2014_minival.json
   val2014/
     # image files that are mentioned in the minival json
-  UV_data/
+  densepose_uv_data/
     UV_Processed.mat
     ...
 ```

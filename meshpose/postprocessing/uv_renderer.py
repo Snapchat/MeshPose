@@ -1,6 +1,6 @@
 import os
 
-os.environ['PYOPENGL_PLATFORM'] = 'egl'
+os.environ['PYOPENGL_PLATFORM'] = 'egl'  # comment out for MacOS
 
 import trimesh
 import pyrender
@@ -12,7 +12,7 @@ class IUVRenderer:
     def __init__(self, resolution=(224, 224)):
         super().__init__()
         self.w, self.h = resolution
-        uv_processed = loadmat('DensePose_COCO/UV_data/UV_Processed.mat')
+        uv_processed = loadmat('DensePose_COCO/densepose_uv_data/UV_Processed.mat')
         self.uv_vertices = uv_processed['All_vertices'][0]
         self.faces = uv_processed['All_Faces']
         self.face_indices = np.array(uv_processed['All_FaceIndices']).squeeze()
@@ -26,7 +26,7 @@ class IUVRenderer:
 
         self.vertex_uv_colors = np.stack((self.u_norm, self.v_norm, np.zeros(len(self.u_norm))), axis=1)
         self.face_i_colors = np.concatenate((np.expand_dims(self.face_indices, axis=1),
-                                            np.zeros([len(self.faces), 2])), axis=1)
+                                            np.zeros([len(self.faces), 2])), axis=1)/255
 
     def transform_vertices(self, vertices):
         """
