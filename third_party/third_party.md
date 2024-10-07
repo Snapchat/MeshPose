@@ -1,1 +1,1 @@
-Please install https://github.com/facebookresearch/detectron2/ for DensePose evaluation.
+Please install https://github.com/MeshPose/densepose_eval/ for DensePose evaluation.
