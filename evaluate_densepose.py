@@ -15,12 +15,10 @@ from meshpose.postprocessing.uv_renderer import IUVRenderer
 
 
 try:
-    sys.path.insert(0, 'third_party/detectron2')
-    sys.path.insert(0, 'third_party/detectron2/projects/DensePose/')
-    from densepose.structures.chart_result import DensePoseChartResultQuantized
-    from densepose.evaluation.evaluator import _evaluate_predictions_on_coco
+    sys.path.insert(0, 'third_party/densepose_eval')
+    from evaluator import _evaluate_predictions_on_coco, DensePoseChartResultQuantized
 except ImportError as e:
-    raise ImportError('Please download and install detectron2 in ./third_party')
+    raise ImportError('Please download and install densepose_eval in ./third_party')
 
 
 RENDER_RESOLUTION = (1024, 1024)

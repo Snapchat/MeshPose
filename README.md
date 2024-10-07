@@ -33,12 +33,12 @@ This will plot the front and side view of the predicted vertices on top of the o
 
 ### Data and Benchmark Preparation
 
-Clone `detectron2` in `third_party`
+Clone `densepose_eval` in `third_party`
 ```
 cd third_party
-git clone https://github.com/facebookresearch/detectron2.git
+git clone https://github.com/MeshPose/densepose_eval.git
 ```
-and follow its [installation instructions](https://detectron2.readthedocs.io/en/latest/tutorials/install.html).
+and follow its [installation instructions](https://github.com/MeshPose/densepose_eval?tab=readme-ov-file#installation).
 
 Download the `densepose minival` dataset and the UV data into `./DensePose_COCO` according to the instructions in [`./DensePose_COCO/densepose_dataset.md`](https://github.com/Snapchat/MeshPose/blob/main/DensePose_COCO/densepose_dataset.md).
 

@@ -8,11 +8,16 @@ import numpy as np
 from scipy.io import loadmat
 
 
+PATH_UV_MAT = 'third_party/densepose_eval/DensePoseData/UV_data/UV_Processed.mat'
+
+
 class IUVRenderer:
     def __init__(self, resolution=(224, 224)):
         super().__init__()
         self.w, self.h = resolution
-        uv_processed = loadmat('DensePose_COCO/densepose_uv_data/UV_Processed.mat')
+        if not os.path.exists(PATH_UV_MAT):
+            raise FileNotFoundError('Please download densepose_eval')
+        uv_processed = loadmat(PATH_UV_MAT)
         self.uv_vertices = uv_processed['All_vertices'][0]
         self.faces = uv_processed['All_Faces']
         self.face_indices = np.array(uv_processed['All_FaceIndices']).squeeze()
