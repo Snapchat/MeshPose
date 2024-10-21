@@ -4,7 +4,7 @@ import argparse
 from tqdm import tqdm
 from pycocotools.coco import COCO
 
-from inference import MeshPoseInference
+from meshpose.utils.meshpose_inference import MeshPoseInference
 from meshpose.utils import imread, round_np
 
 if __name__ == '__main__':

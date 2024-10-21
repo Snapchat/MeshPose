@@ -76,5 +76,18 @@ def imread(path):
     return cv2.cvtColor(cv2.imread(path, cv2.IMREAD_COLOR), cv2.COLOR_BGR2RGB)[..., :3]
 
 
+def imwrite(path, image):
+    cv2.imwrite(path, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+
+
 def round_np(array, decimals=4):
     return np.round(array.tolist(), decimals)
+
+
+def visualize_vertices(image, results, vertices_type):
+    for result in results:
+        vertices = result[vertices_type]
+        for vertex in vertices:
+            coords = (int(vertex[0]), int(vertex[1]))
+            cv2.circle(image, coords, radius=5, color=(0, 255, 0), thickness=-1)
+    return image

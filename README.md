@@ -29,6 +29,26 @@ python3 inference.py
 ```
 This will plot the front and side view of the predicted vertices on top of the original image.
 
+## Run Video Demo
+To run MeshPose on a video using a simple person detector/tracker:
+```
+python3 video_demo.py --input_video assets/4812014-hd_1920_1080_30fps.mp4 --do_rendering
+```
+This will render the meshes of all detected persons on top of the original video. 
+It will also save the predicted vertices for every frame in a json-file.
+
+To use the ``--do_rendering`` option, ``densepose_eval`` must be installed in the ``third_party`` directory (see below).
+
+## Run Image Folder Demo
+To run MeshPose on an image folder using a simple person detector/tracker:
+```
+python3 images_demo.py --input_folder assets/example_images --do_rendering
+```
+This will render the meshes of all detected persons on top of each original image. 
+It will also save the predicted vertices for each image in a json-file.
+
+To use the ``--do_rendering`` option, ``densepose_eval`` must be installed in the ``third_party`` directory (see below).
+
 ## MeshPose Evaluation on the DensePose Benchmark
 
 ### Data and Benchmark Preparation

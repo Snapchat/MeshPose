@@ -39,7 +39,7 @@ class IUVRenderer:
         """
         vertices[:, 0] = (vertices[:, 0] - self.w / 2) * 2 / self.h
         vertices[:, 1] = (1 - vertices[:, 1] * 2 / self.h)
-        vertices[:, 2] = -10-(vertices[:, 2] - vertices[:, 2].min()+1) * 2 / self.h
+        vertices[:, 2] = -10 - (vertices[:, 2] - vertices[:, 2].min()+1) * 2 / self.h
         return vertices
 
     def new_mesh_scene(self, mesh):
